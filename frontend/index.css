@@ -1,0 +1,321 @@
+*{
+    box-sizing: border-box;
+       top: 0;
+      left: 0;
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    background: url('./s-migaj-Yui5vfKHuzs-unsplash.jpg') no-repeat;
+    background-size: cover;
+}
+header{
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+.dark{
+    background-color:black;
+    background-image: url('./s-migaj-Yui5vfKHuzs-unsplash.jpg') no-repeat;
+    background-blend-mode:multiply;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer'
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+header h3{
+ grid-area: header;
+ text-align: center;
+ text-shadow: 1em;
+ background-color: rgb(29, 24, 25);
+ display: grid;
+ padding: 1rem;
+ overflow: hidden;
+ grid-column-start: 1;
+ grid-column-end: 3;
+}
+header h3:hover{
+    color: #f80;
+}
+.hamburger{
+    text-align:left;
+    padding: 0.5rem;
+    justify-content: space-around;
+ 
+}
+.link{
+    background-color:black;
+    border: 2px lightgreen solid;
+    border-radius:4rem;
+    padding: 0.3rem;
+    margin: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: skyblue;
+}
+a{
+    color: blue;
+    list-style-type: none;
+    text-decoration: none;
+}
+.link:hover{
+    background-color: rgba(24, 49, 189, 0.849) ;
+    color: orange;
+    border: 2px solid red;
+
+}
+footer{
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(8, 36, 36);
+    font-family: serif;
+    color: lightseagreen;
+    width: 100%;
+    padding: 5em;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 2rem;
+    margin: 0;
+    justify-content: center;
+}
+.message{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    margin: 12px;
+    padding: 12px;
+    float: left;
+    justify-content: center;
+    background-color: red;
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 13px;
+}
+li{
+    background: lightcyan;
+    margin-top: 10rem;
+    padding:2rem;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+.product li{
+    flex:0 1 30rem;
+    margin: 1rem;
+    float: left;
+    margin-bottom: 0;
+    height: 100rem;
+    border-top:0.2rem #ffff solid;
+
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+
+}
+.product img{
+    max-width:23rem;
+    max-height: 20rem;
+    margin-top: 4rem;
+
+}
+main{
+    grid-area: main;
+}
+.Product-rating{
+    color:gold;
+    font-size: 1.4rem;   
+}
+.Product-rating span:last-child{
+color: rgba(134, 8, 8, 0.61);
+}
+.detailimage{
+ max-width:23rem;
+ max-height: 23rem;
+ margin-top:4rem;
+}
+.detailname{
+    display: grid;
+    color: blueviolet;
+    grid-row: 2;
+    margin-top: 6rem;
+    grid-template:main;
+    font-family:'Playfair Display', serif;
+}
+.detailprice{
+    font-family: serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.category{
+font-family: 'Times New Roman', Times, serif;
+font-size: 2rem;
+font-weight: lighter;
+}
+.Cartbox{
+ display: flex;
+ flex-direction: column;
+ background: rgb(0, 119, 109);
+ flex-basis: 12px;
+ justify-content: center;
+ border: 2px solid rgb(30, 255, 0);
+ border-radius: 1rem;
+ margin: 8rem;
+ padding: 2rem;
+
+}
+.cart-button{
+    height: 59px;
+    width: 113px;
+}
+.success{
+    color: green;
+    background-color: black;
+}
+.error{
+    color: red;
+    background-color: black;
+}
+.back{
+    display: flex;
+    background-color: blue;
+    border: 2px white solid;
+    border-radius:4rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: white;
+    justify-content: space-around;
+}
+.back:hover{
+    background-color: rgba(0, 0, 0, 0.753);
+    border-bottom: 1px solid white;
+    opacity: 0.8 black;
+}
+.cart{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    margin: 4rem;
+}
+.cart-list{
+    flex:1 3 60rem;
+}
+.cart-list-container{
+    padding:1rem;
+    margin: 1rem;
+}
+.cart-list-container li{
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1rem solid grey;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.action{
+    border-radius: 0.5rem solid grey;
+}
+.cart-list-container img{
+    max-height: 10rem;
+    max-width: 10rem;    
+}
+.cart-image{
+    flex:1 1;
+}
+.cart-name{
+    flex:8 1;
+}
+.cart-price{
+    flex: 8 1;
+    text-align:right;
+}
+/* Form*/
+.from-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+.from-items{
+    color: white;
+    text-shadow: 0 0 5px rgba(3, 166, 236, 0.774),
+    0 0 10px rgba(3, 166, 236, 0.774),
+    0 0 15px rgba(3, 166, 236, 0.774),
+    0 0 20px rgba(3, 166, 236, 0.774),
+    0 0 25px rgba(3, 166, 236, 0.774);
+    font-family: 'Pacifico', cursive;
+    list-style-type: none;
+    justify-content: space-around;
+    border: 1px solid lightgreen;
+    padding: 3rem;
+    margin-top: 10rem;
+    background-blend-mode: hue;
+    border-radius: 1rem;
+    background-image: linear-gradient(90deg,grey,black,lightblue);
+}
+label{
+    font-size: x-large;
+    line-height: 0.9;
+}
+input{
+    color: skyblue;
+    background-color: black;
+    border-radius: 10px;
+}
+input:hover{
+    background-image: linear-gradient(90deg,red,black);
+    border-radius: 10px;
+}
+.overlay{
+    display: none;
+    position: fixed;
+    z-index:1000;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(16,16,16,0.5);
+}
+.overlay.active{
+display:flex;
+justify-content: center;
+align-items:center;
+color:#ffff;
+
+}
+.overlay > div{
+background-color: #ffff;
+color: #000000;
+border-radius: .5rem;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+max-width: 40rem;
+}
+.overlay > div * {
+    margin: 2rem;
+}
+.reg{
+    margin-top: 5em;
+}
